@@ -46,6 +46,17 @@ public class ContactManager
         }
     }
 
-
+    public void SearchContact(string name)
+    {
+        var contact = contacts.Find(c => c.Name == name);
+        if (contact != null)
+        {
+            Console.WriteLine(contact);
+        }
+        else
+        {
+            Console.WriteLine("Contact not found...");
+        }
+    }
 
 }
