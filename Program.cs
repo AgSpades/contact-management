@@ -19,11 +19,33 @@
 
 public class ContactManager
 {
+    //make a list accessible only to this class.
     private List<Contact> contacts = new List<Contact>();
 
     public void AddContact(Contact contact)
     {
         contacts.Add(contact);
     }
+
+    public void DeleteContact(string name)
+    {
+        var contact = contacts.Find(c => c.Name == name);
+        if (name != null)
+        {
+            contacts.Remove(contact);
+        }
+    }
+
+    public void UpdateContact(string newPhoneNumber, string newEmail, string name)
+    {
+        var contact = contacts.Find(c => c.Name == name);
+        if (contact != null)
+        {
+            contact.PhoneNumber = newPhoneNumber;
+            contact.Email = newEmail;
+        }
+    }
+
+
 
 }
