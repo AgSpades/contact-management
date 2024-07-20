@@ -16,3 +16,14 @@
         return $"Name: {Name}, Phone: {PhoneNumber}, Email: {Email}";
     }
 }
+
+public class ContactManager
+{
+    private List<Contact> contacts = new List<Contact>();
+
+    public void AddContact(Contact contact)
+    {
+        contacts.Add(contact);
+    }
+
+}
