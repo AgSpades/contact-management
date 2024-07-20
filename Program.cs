@@ -59,4 +59,12 @@ public class ContactManager
         }
     }
 
+    public void DisplayContacts()
+    {
+        foreach (var contact in contacts)
+        {
+            Console.WriteLine(contact);
+        }
+    }
+
 }
